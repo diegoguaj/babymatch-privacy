@@ -116,4 +116,376 @@
       font-size: 13px;
       padding: 5px 16px;
       border-radius: 100px;
-      letter-spacing: 0.3
+      letter-spacing: 0.3px;
+      margin-bottom: 20px;
+    }
+    header p.subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0;
+      opacity: 0.5;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-heart { color: var(--coral); font-size: 12px; }
+    .summary-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(255,107,107,0.07);
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .summary-card h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .summary-card h2::before {
+      content: '✦';
+      color: var(--yellow);
+      font-size: 14px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 500px) { .summary-grid { grid-template-columns: 1fr; } }
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .summary-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .dot-coral  { background: var(--coral); }
+    .dot-green  { background: var(--green); }
+    .dot-blue   { background: var(--blue); }
+    .dot-yellow { background: var(--yellow); }
+    .section {
+      margin-bottom: 36px;
+      animation: fadeUp 0.5s ease both;
+    }
+    .section:nth-child(2)  { animation-delay: 0.05s; }
+    .section:nth-child(3)  { animation-delay: 0.10s; }
+    .section:nth-child(4)  { animation-delay: 0.15s; }
+    .section:nth-child(5)  { animation-delay: 0.20s; }
+    .section:nth-child(6)  { animation-delay: 0.25s; }
+    .section:nth-child(7)  { animation-delay: 0.30s; }
+    .section:nth-child(8)  { animation-delay: 0.35s; }
+    .section:nth-child(9)  { animation-delay: 0.40s; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: var(--coral-soft);
+      color: var(--coral);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .section p {
+      font-size: 15.5px;
+      color: #4A4240;
+      margin-bottom: 14px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .highlight {
+      border-left: 3px solid var(--coral);
+      background: var(--coral-soft);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .highlight.green {
+      border-color: var(--green);
+      background: #F0FAF1;
+    }
+    .highlight.blue {
+      border-color: var(--blue);
+      background: #F0F7FA;
+    }
+    .contact-card {
+      background: linear-gradient(135deg, var(--coral) 0%, #FF9494 100%);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      color: white;
+      margin-top: 48px;
+      box-shadow: 0 8px 32px rgba(255,107,107,0.25);
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+    .contact-card h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      font-size: 15px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: white;
+      color: var(--coral);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 11px 28px;
+      border-radius: 100px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-card a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-family: 'Quicksand', sans-serif;
+    }
+    footer strong { color: var(--coral); }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" aria-hidden="true">
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+  </div>
+  <div class="wrapper">
+    <header>
+      <div class="logo-mark">
+        <svg width="52" height="40" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="leftGrad" cx="40%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#FF8C8C"/>
+              <stop offset="100%" stop-color="#F06060"/>
+            </radialGradient>
+            <radialGradient id="rightGrad" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#82CEDE"/>
+              <stop offset="100%" stop-color="#5AAECC"/>
+            </radialGradient>
+          </defs>
+          <circle cx="20" cy="20" r="13" fill="white"/>
+          <circle cx="20" cy="20" r="12" fill="url(#leftGrad)"/>
+          <circle cx="32" cy="20" r="13" fill="white"/>
+          <circle cx="32" cy="20" r="12" fill="url(#rightGrad)"/>
+          <circle cx="43" cy="30" r="4" fill="white"/>
+          <circle cx="43" cy="30" r="3" fill="#6BCB77"/>
+        </svg>
+        <span class="logo-name">Baby<span>Match</span></span>
+      </div>
+      <div class="header-pill">Privacy Policy</div>
+      <h1>Your privacy<br>is our main concern.</h1>
+      <p class="subtitle">Last updated: March 2026</p>
+    </header>
+
+    <div class="summary-card">
+      <h2>The short version</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="summary-dot dot-green"></div>
+          <span>No account required — no email, no sign-in for the core experience</span>
+        </div>
+        <div class="summary-item">
+          <div class="summary-dot dot-coral"></div>
+          <span>We don't sell or share your personal information with third parties</span>
+        </div>
+        <div class="summary-item">
+          <div class="summary-dot dot-blue"></div>
+          <span>Partner pairing uses a secure cloud backend — your name and matches are synced privately</span>
+        </div>
+        <div class="summary-item">
+          <div class="summary-dot dot-yellow"></div>
+          <span>You can delete all your data at any time from within the app</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">♥</div><div class="divider-line"></div></div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">1</div>
+        <h2>Who we are</h2>
+      </div>
+      <p>BabyMatch is an iOS app that helps couples find baby names they both love. This Privacy Policy explains how the app handles your information when you use it.</p>
+      <p>BabyMatch is an independent app. If you have any questions about this policy, you can reach us at the contact details at the bottom of this page.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <h2>What data we collect</h2>
+      </div>
+      <p>BabyMatch uses a secure cloud backend (Supabase) to enable partner pairing and sync your experience across sessions. The following data is collected and stored on our servers:</p>
+      <div class="highlight green">
+        <strong>Device identifier</strong> — a randomly generated anonymous ID created on your first launch and stored securely in your device keychain. This is your identity in the app. No email address or Apple ID is required.
+      </div>
+      <div class="highlight green">
+        <strong>Display name</strong> — the first name you enter during onboarding (e.g. "Diego"). This is stored so your partner can see your name when you connect.
+      </div>
+      <div class="highlight green">
+        <strong>Swipe history</strong> — every name you swipe right or left on is recorded, associated with your device identifier. This is used to detect mutual matches with your partner and to prevent names from reappearing after you've seen them.
+      </div>
+      <div class="highlight green">
+        <strong>Partner connection data</strong> — when you connect with a partner, a shared couple record is created containing both device identifiers, connection timestamps, and shared purchase entitlements.
+      </div>
+      <div class="highlight green">
+        <strong>Purchase records</strong> — when you make an in-app purchase, the purchased product identifiers are stored as part of your couple record so your partner can also access your unlocked collections while you are connected.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">3</div>
+        <h2>What data we do not collect</h2>
+      </div>
+      <p>We do not collect:</p>
+      <div class="highlight">
+        Your email address, phone number, or any contact information.
+      </div>
+      <div class="highlight">
+        Location data, camera or microphone access, or any device sensors.
+      </div>
+      <div class="highlight">
+        Analytics, usage tracking, crash reports, or advertising identifiers.
+      </div>
+      <p>BabyMatch does not use any third-party analytics SDKs, advertising networks, or tracking frameworks.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">4</div>
+        <h2>In-App Purchases</h2>
+      </div>
+      <p>BabyMatch offers optional one-time purchases to unlock additional name collections and features. All payments are processed securely by Apple through the App Store. We do not receive, store, or have access to your payment details — Apple handles the entire transaction.</p>
+      <div class="highlight blue">
+        Apple's privacy policy governs all payment processing. You can review it at <strong>apple.com/legal/privacy</strong>.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">5</div>
+        <h2>Partner pairing</h2>
+      </div>
+      <p>BabyMatch supports real-time partner pairing, allowing two people to connect and discover mutual name matches together. When you use this feature:</p>
+      <div class="highlight blue">
+        Your display name is readable by other authenticated app users. This is necessary so your partner can see your name when you connect.
+      </div>
+      <p>Your individual swipe choices are not shown to your partner. Only mutual matches — names you both liked — are surfaced to both of you. Partner pairing is entirely opt-in; you can use BabyMatch in solo mode without connecting to anyone.</p>
+      <p>When partners disconnect, each person retains their own purchase entitlements. Your swipe history and matches are preserved on our servers and can be restored if you reconnect.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">6</div>
+        <h2>Children's privacy</h2>
+      </div>
+      <p>BabyMatch is designed for use by adults — specifically, expectant parents. The app is not directed at children under 13 and we do not knowingly collect any information from children. If you believe a child has provided information through the app, please contact us and we will take steps to remove it.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">7</div>
+        <h2>Data retention and deletion</h2>
+      </div>
+      <p>Your data is stored on our servers for as long as you use the app. <strong>Deleting the app from your device does not delete your data from our servers.</strong></p>
+      <p>To delete your account and all associated data, use the Delete Account option in the app's Profile screen. This removes your device record, swipe history, match data, and couple connection from our servers. You can also contact us at the email below and we will delete your data within 30 days.</p>
+      <div class="highlight green">
+        To delete your account: open the <strong>Profile tab</strong> → scroll to the Account section → tap <strong>Delete Account</strong>.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">8</div>
+        <h2>Backend infrastructure</h2>
+      </div>
+      <p>BabyMatch uses <a href="https://supabase.com" style="color: var(--coral);">Supabase</a> as its backend database and authentication provider. Data is stored on Supabase-managed servers. Supabase's privacy policy is available at <a href="https://supabase.com/privacy" style="color: var(--coral);">supabase.com/privacy</a>.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">9</div>
+        <h2>Changes to this policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time as new features are introduced or our practices change. When we make changes, we will update the "Last updated" date at the top of this page.</p>
+      <p>We encourage you to review this page periodically. Continued use of BabyMatch after any changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Questions or concerns?</h2>
+      <p>We'd love to hear from you. Get in touch any time.</p>
+      <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+    </div>
+
+    <footer>
+      <p>© 2026 <strong>YOUR_NAME</strong>. Made with ♥ for expectant parents everywhere.</p>
+    </footer>
+  </div>
+</body>
+</html>
